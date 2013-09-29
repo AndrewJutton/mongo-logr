@@ -1,0 +1,23 @@
+{
+    "name" : "mongo-logr",
+    "description" : "Node module to log messages to a mongo database",
+    "keywords" : [ "log", "logr", "logging", "mongo logging" ],
+    "version" : "1.0.0",
+    "author" : "Andrew Jutton <ajutton@gmail.com>",
+    "repository" : { "type": "git",
+        "url": "git@github.com:AndrewJutton/mongo-logr.git" },
+    "main": "index.js",
+    "dependencies": {
+        "async" : "0.2.9",
+        "mongoose": "3.6.20",
+        "colors": "0.6.2"
+    },
+    "devDependencies": {
+        "should": "1.3.0",
+        "jasmine-node": "1.11.0"
+    },
+    "optionalDependencies": {},
+    "engines": {
+        "node": "*"
+    }
+}
