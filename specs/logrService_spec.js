@@ -23,7 +23,7 @@ describe("logr service tests", function() {
 
             options = {
                 mongo: {
-                    connection: "mongodb://localhost:27017/stubr",
+                    connection: "mongodb://localhost:27017/test",
                     collectionName: "logr"
                 }
             };
