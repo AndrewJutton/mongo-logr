@@ -57,6 +57,22 @@ If you are using the mongo logger, you will need to call logger.setOptions
     logger.setOptions(options);
 
 
+Set Log Level
+-------------
+
+You can set the minimum log level to log at with the following:
+
+###Example
+    logger.setLogLevel("warning");
+
+This will only log for messages that are set to warning or higher.  The levels are as follows:
+
+###Example
+   logger.setLogLevel("info");      > Will log: info, debug, warning and error
+   logger.setLogLevel("debug");     > Will log: debug, warning and error
+   logger.setLogLevel("warning");   > Will log: warning and error
+   logger.setLogLevel("error");     > Will log: error only
+
 To Log
 ------
 
@@ -66,11 +82,12 @@ Now you're all set to start logging.  mongo-logr provides a number of convenienc
 
     logger.info("custom message", "custom object");
     logger.debug("custom message", "custom object");
-    logger.error("custom message", "custom object");
+    logger.warning("custom message", "custom object");
+    logger.error("custom message", "custom object", error);
 
 
 
-EXAMPLES
+Examples
 --------
 
 Please refer to the tests in the "specs" folder for working examples

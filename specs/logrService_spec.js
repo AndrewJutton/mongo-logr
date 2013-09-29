@@ -9,22 +9,29 @@ describe("logr service tests", function() {
         var options;
 
         beforeEach(function() {
-
-            options = {
-                mongo: {
-                    connection: "mongodb://localhost:27017/stubr",
-                    collectionName: "myLog"
-                }
-            };
-
             logger = logrService;
         });
 
         it("should log to console", function() {
-            logger.setOptions(options);
+            logger.setOptions(null);
+            logger.setLogLevel("error");
             logger.addListener('console');
+            logger.error("test message", null, new Error("Test"));
+        });
+
+        it("should log to mongo", function() {
+
+            options = {
+                mongo: {
+                    connection: "mongodb://localhost:27017/stubr",
+                    collectionName: "logr"
+                }
+            };
+
+            logger.setOptions(options);
             logger.addListener('mongo');
-            logger.info("test message", null);
+            logger.setLogLevel("debug");
+            logger.warning("test message", null, new Error("Test"));
         });
 
     });
