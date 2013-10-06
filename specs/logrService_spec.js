@@ -1,5 +1,5 @@
 should = require('should');
-logrService = require('../lib/logrService');
+logrService = (require('../lib/logrService')).logger;
 
 describe("logr service tests", function() {
 

@@ -1,1 +1,1 @@
-module.exports = require('./lib/logrService');
+module.exports.logger = require('./lib/logrService');
