@@ -2,7 +2,7 @@
     "name" : "mongo-logr",
     "description" : "Node module to log messages to a mongo database",
     "keywords" : [ "log", "logr", "logging", "mongo logging" ],
-    "version" : "1.0.0",
+    "version" : "1.0.1",
     "author" : "Andrew Jutton <ajutton@gmail.com>",
     "repository" : { "type": "git",
         "url": "git@github.com:AndrewJutton/mongo-logr.git" },
